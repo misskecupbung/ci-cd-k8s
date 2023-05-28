@@ -1,19 +1,22 @@
-name: CI/CD rentcar Backend app
+name: CI/CD rentcar
 on:
   push:
     branches: [main]
     paths:
-    - 'rentcar/**'
+    - './rentcar/'
     - '.github/workflows/cicd-rentcar.yaml'
-
 env:
   ECR_REPOSITORY: rentcar
   AWS_REGION: ap-southeast-1
 
 jobs:
   cicd-rentcar:
-    name: CI/CD Workflow for rentcar
+    name: CI/CD Workflow rentcar backend
     runs-on: ubuntu-latest
+    defaults:
+      run:
+      working-directory: ./rentcar
+
 
     steps:
       - name: Checkout
