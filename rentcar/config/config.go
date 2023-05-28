@@ -1,8 +1,8 @@
 package config
 
 var (
-	Server_Port = ":8000"
-	Mongo_Host  = "mongodb://mongodb:27017"
+	Server_Port = "0.0.0.0:8000"
+	Mongo_Host  = "mongodb://mongodb-svc:27017"
 	// Ex: For local:
 	// Mongo_Host = "mongodb://localhost:27017"
 )

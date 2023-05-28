@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rentcar
+  name: rentcar
+  namespace: rentcar
+spec:
+  selector:
+    matchLabels:
+      app: rentcar
+      svc: rentcar-svc
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: rentcar
+        svc: rentcar-svc
+    spec:
+      containers:
+      - name: rentcar
+        image: public.ecr.aws/x4x9p0i6/rentcar:v2
+        ports:
+        - containerPort: 8000

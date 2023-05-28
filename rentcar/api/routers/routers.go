@@ -25,5 +25,5 @@ func (s *Server) SetupRouters() {
 	s.Router.HandleFunc("/api/cars/reserve", Handle(s.Handlers.ReserveCar).Methods("POST"))
 	s.Router.HandleFunc("/api/cars/available", Handle(s.Handlers.AvailableCars).Methods("GET"))
 	s.Router.HandleFunc("/api/swagger/", Handle(httpSwagger.Handler(
-		httpSwagger.URL("http://rentcar.dwiananda.click/api/swagger/doc.json"))).Methods("GET"))
+		httpSwagger.URL("https://rentcar.dwiananda.click/api/swagger/doc.json"))).Methods("GET"))
 }
