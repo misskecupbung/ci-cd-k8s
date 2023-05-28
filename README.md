@@ -4,22 +4,22 @@
 This repo contains two backend applications named **rentcar** using on Go programming language and **carshop** using on Node.js that will automatically deployed to Amazon EKS 
 cluster using CI/CD Github Action.
 
-### rentcar
+## rentcar
 This is a simple rest api for rent car service based on Go programming language without relying on external frameworks. The folder contains code itself and manifests file on 
 manifests folder for Kubernetes deployment and service. Source code: [https://github.com/worlpaker/go_rentacar_restapi](https://github.com/worlpaker/go_rentacar_restapi)
 
-#### Features
+### Features
 - Manual handling of routing, middlewares, and helper functions.
 - Swagger Documentation
 - Go unit tests with mocking MongoDB
 
-#### Components
+### Components
 - Go
 - Javascript
 - Docker
 - MongoDB
 
-#### API Endpoints
+### API Endpoints
 - https://rentcar.dwiananda.click/ (404 not found)
 - Swagger: [https://rentcar.dwiananda.click/api/swagger/index.html](https://rentcar.dwiananda.click/api/swagger/index.html)
 - cars
@@ -39,11 +39,11 @@ manifests folder for Kubernetes deployment and service. Source code: [https://gi
   - **GET** : [https://rentcar.dwiananda.click/api/locations/show](https://rentcar.dwiananda.click/api/locations/show)
 
 
-### carshop
+## carshop
 This is a simple rest api for car shop service based on Node.js and MongoDB as a database. The folder contains code itself and manifests file on manifests folder for Kubernetes 
 deployment and service. Source code: [https://github.com/jonathankarlinski/car-shop](https://github.com/jonathankarlinski/car-shop)
 
-#### Components
+### Components
 - Typescript
 - MongoDB
 - Mongoose
@@ -55,7 +55,7 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
 - POO
 - CRUD
 
-#### API Endpoints
+### API Endpoints
 - https://carshop.dwiananda.click/ (404 not found)
 - cars
   - **GET** : [https://carshop.dwiananda.click/api/cars](https://carshop.dwiananda.click/api/cars)
@@ -89,7 +89,7 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
   }
   ```
 
-#### Infrastructure Stacks
+## Infrastructure Stacks
 - **Amazon EKS**
   <br> This service is for the Kubernetes cluster platform managed by AWS. I've deployed using `eksctl` tool with cloudformation stack.
 - **Amazon EC2 (Elastic Compute Cloud)**
@@ -111,7 +111,7 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
 - **GitHub & GitHub Actions**
 - NB: **Screenshots for documentation attached on [images](images/) folder**
 
-#### References
+## References
 - https://docs.aws.amazon.com/
 - https://github.com/marketplace/actions/kubectl-aws-eks
 - https://github.com/aws-actions/amazon-ecr-login
