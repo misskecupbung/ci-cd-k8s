@@ -50,9 +50,10 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ env.ECR_REPOSITORY }}
           IMAGE_TAG: ${{ github.sha }}
         with:
-          args: set image deployment/${{ env.ECR_REPOSITORY }} $ECR_REPOSITORY=$ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG -n ${{ env.ECR_REPOSITORY }}
+          args: set image -n $ECR_REPOSITORY deployment/$ECR_REPOSITORY $ECR_REPOSITORY=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
       - name: verify deployment
         uses: kodermax/kubectl-aws-eks@1.1.0
