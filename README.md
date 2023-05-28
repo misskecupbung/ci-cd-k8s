@@ -90,16 +90,16 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
   ```
 
 #### Infrastructure Stacks
-- ![Amazon EKS](images/amazon-eks.png)
-- ![Amazon EC2 (Elastic Compute Cloud)](images/amazon-ec2.png)
-- ![Amazon VPC (Virtual Private Cloud)](images/vpc.png)
-- ![Amazon Route 53](images/amazon-route53.png)
-- ![Amazon ECR (Elastic Container Registry)](images/amazon-ecr.png)
-- ![AWS Certificate Manager (ACM)](images/aws-acm.png)
-- ![ELB using Application Load Balancer (ALB)](images/alb.png)
-- ![AWS CloudFormation](images/cloudformation.png)
+- Amazon EKS
+- Amazon EC2 (Elastic Compute Cloud)
+- Amazon VPC (Virtual Private Cloud)
+- Amazon Route 53
+- Amazon ECR (Elastic Container Registry)
+- AWS Certificate Manager (ACM)
+- ELB using Application Load Balancer (ALB)
+- AWS CloudFormation
 - GitHub & GitHub Actions
-- NB: Screenshots for documentation attached on images folder
+- NB: **Screenshots for documentation attached on images folder**
 
 #### References
 - https://docs.aws.amazon.com/
