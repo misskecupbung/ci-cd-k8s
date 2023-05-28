@@ -1,8 +1,8 @@
 # CI/CD for Amazon EKS using Github Action
 
 ## Descriptions
-This repo contains two backend applications named rentcar based on Go language and carshop based on Node.js that will automatically deployed to Amazon EKS cluster using CI/CD 
-Github Action.
+This repo contains two backend applications named **rentcar** using on Go programming language and **carshop** using on Node.js that will automatically deployed to Amazon EKS 
+cluster using CI/CD Github Action.
 
 ### rentcar
 This is a simple rest api for rent car service based on Go programming language without relying on external frameworks. The folder contains code itself and manifests file on 
@@ -90,16 +90,26 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
   ```
 
 #### Infrastructure Stacks
-- Amazon EKS
-- Amazon EC2 (Elastic Compute Cloud)
-- Amazon VPC (Virtual Private Cloud)
-- Amazon Route 53
-- Amazon ECR (Elastic Container Registry)
-- AWS Certificate Manager (ACM)
-- ELB using Application Load Balancer (ALB)
-- AWS CloudFormation
-- GitHub & GitHub Actions
-- NB: **Screenshots for documentation attached on images folder**
+- **Amazon EKS**
+  <br> This service is for the Kubernetes cluster platform managed by AWS. I've deployed using `eksctl` tool with cloudformation stack.
+- **Amazon EC2 (Elastic Compute Cloud)**
+  <br> This service is for the worker node of the Kubernetes cluster. 
+- **Amazon VPC (Virtual Private Cloud)**
+  <br> Networking service for most of all resources.
+- **Amazon Route 53**
+  <br> This service is for managing the DNS server including its record. 
+- **Amazon ECR (Elastic Container Registry)**
+  <br> This service is to store rentcar and carshop images.
+- **AWS Certificate Manager (ACM)**
+  <br> This service is for provision manage certificates of applications
+- **ELB using Application Load Balancer (ALB)**
+  <br> This service is a load balancer for the application deployed on Amazon EKS
+- **AWS CloudFormation**
+  <br> I've deployed Amazon EKS using a template that runs on cloudformation
+- **AWS IAM (Identity and Access Management)**
+  <br> This service is for configuring and managing access between the resources (e.g: access push the image from GitHub Actions to Amazon ECR)
+- **GitHub & GitHub Actions**
+- NB: **Screenshots for documentation attached on [images](images/) folder**
 
 #### References
 - https://docs.aws.amazon.com/

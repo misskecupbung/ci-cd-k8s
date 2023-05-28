@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: carshop
-        image: public.ecr.aws/x4x9p0i6/carshop:v3
+        image: <IMAGE REPOSITORY>
         ports:
         - containerPort: 3001

@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: rentcar
-        image: public.ecr.aws/x4x9p0i6/rentcar:SHA
+        image: <IMAGE REPOSITORY>
         ports:
         - containerPort: 8000
