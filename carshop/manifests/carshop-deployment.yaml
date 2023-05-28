@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: carshop
+  name: carshop
+  namespace: carshop
+spec:
+  selector:
+    matchLabels:
+      app: carshop
+      svc: carshop-svc
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: carshop
+        svc: carshop-svc
+    spec:
+      containers:
+      - name: carshop
+        image: public.ecr.aws/x4x9p0i6/carshop:v3
+        ports:
+        - containerPort: 3001

@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 3001
 
 # default run command
-CMD ["npm,"run","start"]
+CMD npm run start

@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rentcar
+  name: mongodb-rentcar
+  namespace: rentcar
+spec:
+  selector:
+    matchLabels:
+      app: rentcar
+  template:
+    metadata:
+      labels:
+        app: rentcar
+    spec:
+      containers:
+      - name: mongodb-rentcar
+        image: mongo:latest
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongodb-rentcar-init
+          mountPath: /docker-entrypoint-initdb.d
+      volumes:
+      - name: mongodb-rentcar-init
+        configMap:
+          name: mongodb-rentcar-init
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: rentcar
+  name: mongodb-rentcar-svc
+  namespace: rentcar
+spec:
+  selector:
+    app: rentcar
+  ports:
+    - name: mongodb-rentcar-svc
+      port: 27017
+      protocol: TCP
+      targetPort: 27017

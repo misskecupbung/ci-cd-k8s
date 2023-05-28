@@ -4,11 +4,8 @@ metadata:
   name: rentcar-svc
   namespace: rentcar
   annotations:
-    # Note that the backend talks over HTTP.
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
-    # TODO: Fill in with the ARN of your certificate.
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: ACM_ARN
-    # Only run SSL on the port named "https" below.
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-southeast-1:account_id:certificate/id
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "https"
 spec:
   selector:
