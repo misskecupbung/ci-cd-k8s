@@ -58,8 +58,8 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
 ### API Endpoints
 - https://carshop.dwiananda.click/ (404 not found)
 - cars
-  - **GET** : [https://carshop.dwiananda.click/api/cars](https://carshop.dwiananda.click/api/cars)
-  - **POST** : [https://carshop.dwiananda.click/api/cars](https://carshop.dwiananda.click/api/cars)
+  - **GET** : [https://carshop.dwiananda.click/cars](https://carshop.dwiananda.click/cars)
+  - **POST** : [https://carshop.dwiananda.click/cars](https://carshop.dwiananda.click/cars)
     <br> Example value: 
     ```json
     {
@@ -73,8 +73,8 @@ deployment and service. Source code: [https://github.com/jonathankarlinski/car-s
     }
     ```
 - motorcycles
-  - **GET** : [https://carshop.dwiananda.click/api/motorcycles](https://carshop.dwiananda.click/api/motorcycles)
-  - **POST** : [https://carshop.dwiananda.click/api/motorcycles](https://carshop.dwiananda.click/api/motorcycles)
+  - **GET** : [https://carshop.dwiananda.click/motorcycles](https://carshop.dwiananda.click/motorcycles)
+  - **POST** : [https://carshop.dwiananda.click/motorcycles](https://carshop.dwiananda.click/motorcycles)
   <br> Example value:
   ```json
   {
