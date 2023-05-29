@@ -4,6 +4,15 @@
 This repo contains two backend applications named **rentcar** using on Go programming language and **carshop** using on Node.js that will automatically deployed to Amazon EKS 
 cluster using CI/CD Github Action.
 
+## Workflows
+The flows of CI/CD GitHub in `.github/workflows` folder are:
+- First, the runner will checkout the code in each of folder repo (e.g if there is any update on carshop folder by push, it will trigger the ci/cd)
+- Then, configure the AWS credentials to login to the AWS env using secrets stored in the Action secret
+- Login to Amazon ECR (Elastic Container Registry) using the AWS credentials before
+- Build, tag, and push each image application to Amazon ECR
+- Deploy the backend to Amazon EKS using a newly pushed image
+- Verify the deployment
+
 ## rentcar
 This is a simple rest api for rent car service based on Go programming language without relying on external frameworks. The folder contains code itself and manifests file on 
 manifests folder for Kubernetes deployment and service. Source code: [https://github.com/worlpaker/go_rentacar_restapi](https://github.com/worlpaker/go_rentacar_restapi)
